@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body>
+    <section id="estudianteForm">
+        <h3>Datos del Estudiante</h3>
+        <input type="text" id="estudianteForm_inNombre" placeholder="Nombre Del Estudiante"/>
+        <input type="text" id="estudianteForm_inCedula" placeholder="Cedula Del Estudiante"/>
+        <input type="text" id="estudianteForm_inSexo" placeholder="Sexo Del Estudiante"/>
+        <input type="text" id="estudianteForm_inNota" placeholder="Nota Del Estudiante"/>
+        <button id="estudianteForm_btnProcesar">Aceptar</button>
+    </section>
+    
+
+    
+    <section id="mainForm">
+        <h3>Informacion del Examen</h3>
+        <p>Porcentaje de Estudiantes Aprobados: <span id="mainForm_lblPorcentajeAprobados">?</span>%</p>
+        <p>Estudiante con La Major Nota: <span id="mainForm_lblEstudianteMejorNota">?</span></p>
+        <p>Porcentaje de Chicas Aprobadas: <span id="mainForm_lblPorcentajeChicasAprobadas">?</span>%</p>
+
+    </section>
+</body>
+<script type="module"> 
+    import Cl_principal from "./js/principal.js"
+    new Cl_principal()
+</script>
+</html>
