@@ -2,21 +2,35 @@ import Cl_vEstudiante from "./Cl_vEstudiante.js";
 import Cl_mEstudiante from "./Cl_mEstudiante.js";
 export default class Cl_vExamen{
     constructor(){
-    this.controlador= null
-    this.lblPorcentajeAprobado=document.getElementById("mainForm_lblPorcentajeAprobados")
-    this.lblEstudianteMejorNota=document.getElementById("mainForm_lblEtudianteMjorNota")
-    this.lblPorcentejeChicasAprobadas=document.getElementById("mainForm_lblPorcentajeChicasAprobadas")
-    this.vEstudiante=new Cl_vEstudiante()
+    this.controlador = null
+    this.lblvalor = document.getElementById("mainform_Valor");
+    this.lblminAprueba = document.getElementById("mainform_MinAprueba");
+    this.btIniciar = document.getElementById("mainform_btIniciar");
+    this.lblPorcentajeAprobado = document.getElementById("mainForm_lblPorcentajeAprobados");
+    this.lblEstudianteMejorNota = document.getElementById("mainForm_lblEstudianteMjorNota");
+    this.lblPorcentejeChicasAprobadas = document.getElementById("mainForm_lblPorcentajeChicasAprobadas");
+    this.vEstudiante = new Cl_vEstudiante();
     this.vEstudiante.inbtProcesar.onclick= () => {
-        this.controlador.procesarEstudiante()
+        this.controlador.procesarEstudiante();
     }
+    this.vEstudiante.inbtProcesar.hidden = true;
+    this.btIniciar.onclick = () => {
+      this.controlador.iniciarExamen(
+        this.lblvalor.value,
+        this.lblminAprueba.value
+      );
+      this.lblvalor.disabled = true;
+      this.lblminAprueba.disabled = true;
+      this.btIniciar.hidden = true;
+      this.vEstudiante.inbtProcesar.hidden = false;
+    };
   }
   procesarEstudiante(){
     this.mEstudiante=new Cl_mEstudiante({
-        nombre:this.vEstudiante.inNombre,
-        cedula:this.vEstudiante.inCedula,
-        sexo:this.vEstudiante.inSexo,
-        nota:this.vEstudiante.inNota,
+        nombre:this.vEstudiante.nombre,
+        cedula:this.vEstudiante.cedula,
+        sexo:this.vEstudiante.sexo,
+        nota:this.vEstudiante.nota,
 
     })
     return this.mEstudiante

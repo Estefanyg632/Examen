@@ -1,7 +1,7 @@
 export default class Cl_mExamen{
-    constructor({v,minAprueba}){
-        this.valor= 20;
-        this.minAprueba= 9.6;
+    constructor({valor = 0,minAprueba = 0}){
+        this.valor= valor;
+        this.minAprueba= minAprueba;
         this.contEstudiantes= 0;
         this.contEstudAprobados= 0;
         this.notaMayor= 0;
@@ -10,7 +10,7 @@ export default class Cl_mExamen{
         this.contChicas= 0
     }
 
-    procesarEstudante(estudiante){
+    procesarEstudiante(estudiante){
         if (estudiante.nota >= this.minAprueba){
             this.contEstudAprobados++;
         }

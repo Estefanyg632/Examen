@@ -8,7 +8,11 @@ export default class Cl_controlador{
         this.vista.reportarEstudiante( 
            this.modelo.porcentajeAprobado(),
            this.modelo.estudianteMejorNota(),
-           this.modelo.porcentajeChicasAprobada(),
+           this.modelo.porcentajeChicasAprobadas(),
         )
+    }
+    iniciarExamen(valor,minAprueba){
+        this.modelo.valor = valor;
+        this.modelo.minAprueba = minAprueba;
     }
 }

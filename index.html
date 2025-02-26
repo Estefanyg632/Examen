@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <section id="estudianteForm">
@@ -15,12 +16,15 @@
         <button id="estudianteForm_btnProcesar">Aceptar</button>
     </section>
     
-
-    
-    <section id="mainForm">
+          <section id="mainForm">
         <h3>Informacion del Examen</h3>
+        <label>Valor del Examen</label>
+        <input id="mainForm_Valor"placeholder="Valor del Examen"/>
+        <label>Minimo para aprobrar el examen</label>
+        <input id="mainForm_MinAprueba" placeholder="Puntos minimos para aprobar"/>
+        <button id="mainform_btIniciar">Iniciar</button>
         <p>Porcentaje de Estudiantes Aprobados: <span id="mainForm_lblPorcentajeAprobados">?</span>%</p>
-        <p>Estudiante con La Major Nota: <span id="mainForm_lblEstudianteMejorNota">?</span></p>
+        <p>Estudiante con La Mayor Nota: <span id="mainForm_lblEstudianteMejorNota">?</span></p>
         <p>Porcentaje de Chicas Aprobadas: <span id="mainForm_lblPorcentajeChicasAprobadas">?</span>%</p>
 
     </section>
