@@ -3,11 +3,11 @@ import Cl_mEstudiante from "./Cl_mEstudiante.js";
 export default class Cl_vExamen{
     constructor(){
     this.controlador = null
-    this.lblvalor = document.getElementById("mainform_Valor");
-    this.lblminAprueba = document.getElementById("mainform_MinAprueba");
-    this.btIniciar = document.getElementById("mainform_btIniciar");
+    this.lblvalor = document.getElementById("mainForm_Valor");
+    this.lblminAprueba = document.getElementById("mainForm_MinAprueba");
+    this.btIniciar = document.getElementById("mainForm_btIniciar");
     this.lblPorcentajeAprobado = document.getElementById("mainForm_lblPorcentajeAprobados");
-    this.lblEstudianteMejorNota = document.getElementById("mainForm_lblEstudianteMjorNota");
+    this.lblEstudianteMejorNota = document.getElementById("mainForm_lblEstudianteMejorNota");
     this.lblPorcentejeChicasAprobadas = document.getElementById("mainForm_lblPorcentajeChicasAprobadas");
     this.vEstudiante = new Cl_vEstudiante();
     this.vEstudiante.inbtProcesar.onclick= () => {

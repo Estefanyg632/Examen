@@ -1,5 +1,5 @@
 export default class Cl_mExamen{
-    constructor({valor = 0,minAprueba = 0}){
+    constructor(valor = 0,minAprueba = 0){
         this.valor= valor;
         this.minAprueba= minAprueba;
         this.contEstudiantes= 0;
