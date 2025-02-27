@@ -12,7 +12,7 @@ export default class Cl_mEstudiante{
        return this._nombre;
     }
     set cedula(c){
-        this._cedula=c;
+        this._cedula=+c;
     }
     get cedula(){
        return this._cedula;
@@ -24,7 +24,7 @@ export default class Cl_mEstudiante{
        return this._sexo;
     }
     set nota(nt){
-        this._nota=nt;
+        this._nota=+nt;
     }
     get nota(){
        return this._nota;

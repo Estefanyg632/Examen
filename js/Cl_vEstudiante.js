@@ -10,12 +10,12 @@ export default class Cl_vEstudiante{
         return this.inNombre.value;
     }
     get cedula(){
-        return this.inCedula.value;
+        return +this.inCedula.value;
     }
     get sexo(){
         return this.inSexo.value;
     }
     get nota(){
-        return this.inNota.value;
+        return +this.inNota.value;
     }
 }

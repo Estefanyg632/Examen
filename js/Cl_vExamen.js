@@ -12,6 +12,9 @@ export default class Cl_vExamen{
     this.vEstudiante = new Cl_vEstudiante();
     this.vEstudiante.inbtProcesar.onclick= () => {
         this.controlador.procesarEstudiante();
+        document.getElementById("estudianteForm").querySelectorAll("input").forEach(
+          (input) => {input.value = ""}
+        )
     }
     this.vEstudiante.inbtProcesar.hidden = true;
     this.btIniciar.onclick = () => {
